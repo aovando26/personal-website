@@ -1,0 +1,220 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* header styles */ 
+.header {  
+	width: 100%;
+	height: 100vh; 
+	background:	url(background-tiling-three.png);
+	background-repeat: repeat;
+	background-size: 50%;
+}
+.navBar {
+	background-color: orange; 
+	width: 100%;
+} 
+.innerHeader { 
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	height: 80%;
+	justify-content: center; 
+	align-items: center; 
+	justify-items: center; 
+	padding: 3vmax 0;
+	position: relative;
+}
+h1 {
+	width: 100%; 
+	text-align: center; 
+	color: #FFFDD0;
+	line-height: 1.5em;
+	background-color: #A24857;
+	font-size: 42px;
+	border: 5px solid black;
+} 
+.imgHeader > img {
+	border-image: url(tb_border-two.png) 50 repeat;
+	border-style: solid; 
+	border-width: 10px; 
+	height: 400px;
+	width: 400px;
+}
+.leftList, .rightList {
+	background-color: ivory;
+	display: flex;
+	flex-direction: column; 
+	padding: 0;
+	margin: 0;
+	align-items: center;
+	width: 50%;
+	justify-content: center;
+	height: 25%;
+	gap: 15px;
+	font-size: 26px;
+	color: #008024;
+	font-weight: 700;
+	outline: 1px solid #A9A9A9;
+	margin-bottom: 80px;
+}
+.leftList {
+	box-shadow: -1px 1px 0px #999,
+            -2px 2px 0px #999,
+            -3px 3px 0px #999,
+            -4px 4px 0px #999,
+            -5px 5px 0px #999,
+            -6px 6px 0px #999,
+            -7px 7px 0px #999,
+            -8px 8px 0px #999,
+            -9px 9px 0px #999,
+            -10px 10px 0px #999;
+}
+.rightList {
+		box-shadow:1px 1px 0px #999, 
+				2px 2px 0px #999, 
+				3px 3px 0px #999, 
+				4px 4px 0px #999, 
+				5px 5px 0px #999, 
+				6px 6px 0px #999, 
+				7px 7px 0px #999, 
+				8px 8px 0px #999, 
+				9px 9px 0px #999, 
+				10px 10px 0px #999;
+}
+.leftList > li, .rightList > li {
+	list-style: none;
+}
+/* end of header */
+
+
+/* start of intro content styes */
+.wrap { 
+	display: flex; 
+	width: 100%;
+	padding: 5vmax 2vmax;	
+	flex-wrap: wrap;
+}
+.contentContainer {
+	display: flex; 
+	max-width: 100%;	
+	flex-wrap: wrap;
+	justify-content: center; 
+}
+.contentContainer h2 {
+	font-size: 32px;
+	margin-bottom: 10px;
+}
+.contentContainer p {
+	line-height: 1.5em;
+	width: 80%;
+	font-size: 18px;
+}
+
+/* end of intro content styes */
+.emptyDiv {
+	display: block;
+	margin-bottom: 2rem; 
+	margin-top: 2rem;
+	overflow: hidden;
+	width: 100%;
+}
+/* start of grid container styes */
+
+.gridContainer {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	max-width: 90%; 
+	/*outline: 3px solid red;*/ 
+	height: 450px;
+	justify-content: center; 
+	align-items: center; 
+	margin: 0 auto;
+	max-height: 100%;
+}
+.gridContainer h2 {
+	font-size: 32px;
+	margin-bottom: 10px;
+}
+.leftGrid {
+	height: 400px;
+	width: 100%;
+}
+.leftGrid blockquote {
+	text-align: center;
+	width: 90%;
+	margin: 10px 0;
+}
+.rightGrid {
+	height: 400px;
+	width: 450px;
+	margin: 40px auto;
+	align-self: center;
+	overflow: auto;
+}
+.gridContainer > .leftGrid > p {
+	line-height: 1.5em;
+	width: 90%;
+	text-align: justify;
+	font-size: 18px;
+}
+
+/* styles for inner right grid */
+.innerGrid {
+	/*outline: 3px solid black;*/
+	width: 100%;
+	height: 80%;
+	position: relative;
+	overflow: hidden; 
+	padding: 3px; 
+	display: flex;
+	justify-content: center;
+	float: left;
+	align-items: baseline;
+}
+/*.innerGrid > #img-one {
+	height: 325px;
+	width: 325px;
+}*/
+.innerGrid img {
+	height: 325px;
+	width: 325px;
+	display: none;
+}
+.innerGrid img.active {
+	display: inline-block;
+	height: 325px;
+	width: 325px;
+}
+.prev, .next {
+	float: left; 
+	margin-top: 130px; 
+	cursor: pointer;
+}
+.prev { 
+	position: relative;
+	margin-right: -45px;
+	z-index: 100;
+} 
+.next { 
+	position: relative;
+	margin-left: -45px;
+	z-index: 100;
+} 
+.educator { 
+	display: grid; 
+	grid-gap: .5em;
+	grid-template-columns: 20% 20% 1fr;
+	width: 100%;
+	grid-template-areas: 
+		"photoOne photoTwo content"
+		"photoThree photoFour content";
+}
+.educator > div {
+	border: 3px solid black;
+}
+.educator > div:last-child {
+		height: 500px; 
+		grid-area: content;
+}
